@@ -5,11 +5,11 @@
 */
 
 (function($) {
-  
+
 	$.fn.krioImageLoader = function(options) {
     	var opts = $.extend({}, $.fn.krioImageLoader.defaults, options);
 		var imagesToLoad = $(this).find("img")
-									.css({opacity: 0, display: "block", visibility: "hidden"})
+									.css({opacity: 0, visibility: "hidden"})
 									.addClass("krioImageLoader");
 		var imagesToLoadCount = imagesToLoad.size();
 
@@ -28,8 +28,8 @@
 		}, opts.loadedCheckEvery);
 		
 		var fadeImageIn = function(imageToLoad) {
-	    	$(imageToLoad).css({visibility: "visible"})
-						.animate({opacity: 1}, 
+			$(imageToLoad).css({visibility: "visible"})
+							.animate({opacity: 1}, 
 								opts.imageEnterDelay, 
 								removeKrioImageClass(imageToLoad));
 		};
