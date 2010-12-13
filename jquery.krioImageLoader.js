@@ -12,7 +12,7 @@
 									.css({opacity: 0, display: "block", visibility: "hidden"})
 									.addClass("krioImageLoader");
 		var imagesToLoadCount = imagesToLoad.size();
-		alert(imagesToLoadCount);
+
 		var checkIfLoadedTimer = setInterval(function() {
 			if(!imagesToLoadCount) {
 				clearInterval(checkIfLoadedTimer);
