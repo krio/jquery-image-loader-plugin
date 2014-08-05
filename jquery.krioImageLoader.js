@@ -1,6 +1,5 @@
 /*
- * Krio Image Loader Jquery Plugin v1
- * http://krio.me/jquery-image-loader-plugin
+ * Krio Image Loader Jquery Plugin
  * http://github.com/jquery-image-loader-plugin
  */
 (function ($) {
@@ -23,8 +22,9 @@
         }, opts.loadedCheckEvery);
 
         var fadeImageIn = function (imageToLoad) {
-            $(imageToLoad).css({visibility: "visible"}).animate({opacity: 1}, opts.imageEnterDelay, function () {
-                $(imageToLoad).removeClass("krioImageLoader");
+            var imTL = $(imageToLoad);
+            imTL.css({visibility: "visible"}).animate({opacity: 1}, opts.imageEnterDelay, function () {
+                imTL.removeClass("krioImageLoader");
             });
         };
     };
